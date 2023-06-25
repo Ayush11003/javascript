@@ -1,0 +1,34 @@
+const NFTs=[];
+
+function mintNFT (_name,_uid,_cgpa,_section) {                     
+const NFT={
+ "name":_name,
+ "uid":_uid,
+ "cgpa":_cgpa,
+ "section":_section
+}
+NFTs.push(NFT);
+console.log("Minted: "+_name)
+}
+
+
+function listNFTs () {
+for(let i=0;i<NFTs.length;i++){
+    console.log("\nID:\t\t"+(i+1))                                      
+    console.log("Name: \t\t"+NFTs[i].name)
+    console.log("uid: \t"+NFTs[i].uid)
+    console.log("cgpa: \t\t"+NFTs[i].cgpa)
+    console.log("section: \t\t"+NFTs[i].section)
+}
+}
+
+function getTotalSupply() {
+  console.log("\n"+NFTs.length)
+}
+
+mintNFT("Ayush","21bcs11003","8.8","910");
+mintNFT("Aviraj","21bcs10973","8.3","876");
+mintNFT("Sarthak","21bcs11017","9.2","453");
+mintNFT("Shankar","21bcs11094","9.5","543");
+listNFTs()
+getTotalSupply()
